@@ -33,7 +33,7 @@ public class PurchaseTest extends BaseClass{
         purchase.clickOnContinueButton();
         purchase.clickOnFinishButton();
         String actualResult = driver.findElement(By.xpath("//*[text()=\"Checkout: Complete!\"]")).getText();
-        String expectedResult = "CHECKOUT: COMPLETE!";
+        String expectedResult = "Checkout: Complete!";
         Assert.assertEquals("Purchase is Not Successful", actualResult, expectedResult);
     }
 }

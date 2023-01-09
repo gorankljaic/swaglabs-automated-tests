@@ -33,8 +33,7 @@ public class ProductsSummationTest extends BaseClass{
         purchase.insertLastName("Johnson");
         purchase.insertZipPostalCode("35995");
         purchase.clickOnContinueButton();
-        productsSummation.sauceLabsBackPackPrice();
-        System.out.println(productsSummation.sauceLabsBackPackPrice());
+        System.out.println(productsSummation.getProductPricesFromCart());
         String realResult = driver.findElement(By.xpath("//div[text()=\"29.99\"]")).getText();
         String desiredResult = driver.findElement(By.xpath("//*[text()=\"29.99\"]")).getText();
         Assert.assertEquals("Not the same result", realResult, desiredResult);

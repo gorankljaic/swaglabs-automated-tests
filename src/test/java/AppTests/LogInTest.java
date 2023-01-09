@@ -14,7 +14,7 @@ public class LogInTest extends BaseClass {
     public void loginWithValidUserNameAndPassword() {
         logInPage.doLogInWithValidCredentials();
         String wantedResult = driver.findElement(By.xpath("//*[text()=\"Products\"]")).getText();
-        String actualResult = "PRODUCTS";
+        String actualResult = "Products";
         Assert.assertEquals("We are not logged in ", wantedResult, actualResult);
     }
 
